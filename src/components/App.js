@@ -7,6 +7,7 @@ import {createChart} from './../ducks/chart.js';
 
 import NewChart from "./NewChart/NewChart";
 import Sidebar from "./Sidebar/Sidebar";
+import ActiveChart from './ActiveChart/ActiveChart.js';
 import AddDataset from "./AddDataset/AddDataset";
 
 class App extends Component {
@@ -29,9 +30,9 @@ class App extends Component {
 							<NewChart createChart={createChart} />
 						</div>
 					</header>
-          <div className="app__active-chart">
-            
-          </div>
+			<div className="app__active-chart">
+				<ActiveChart chart={ activeChart } />
+			</div>
 				</main>
 			</div>
 		);
